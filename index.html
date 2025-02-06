@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NadeSpot</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Blacker+Sans:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Подключение внешнего CSS -->
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <h1>NadeSpot</h1>
+      <div class="header-buttons">
+        <a href="#active-maps">Активные карты</a>
+        <a href="#other-maps">Другие карты</a>
+      </div>
+      <div class="site-icon">🎯</div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav id="navMenu">
+      <div class="menu-header">NadeSpot</div>
+      <div class="menu-content">
+        <a href="contacts.html" class="menu-item"><i>📞</i> Контакты</a>
+        <a href="about.html" class="menu-item"><i>ℹ️</i> О приложении</a>
+        <a href="settings.html" class="menu-item"><i>⚙️</i> Настройки</a>
+      </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container">
+      <section id="active-maps" class="map-section">
+        <h2>Активные карты</h2>
+        <div class="map-grid">
+          <div class="map-card">
+            <a href="anubis.html"
+              ><img src="img/maps/anubis.jpg" alt="Anubis" />
+              <h3>Anubis</h3></a
+            >
+          </div>
+          <div class="map-card">
+            <a href="mirage.html"
+              ><img src="img/maps/mirage.jpg" alt="Mirage" />
+              <h3>Mirage</h3></a
+            >
+          </div>
+          <div class="map-card">
+            <a href="ancient.html"
+              ><img src="img/maps/ancient.jpg" alt="Ancient" />
+              <h3>Ancient</h3></a
+            >
+          </div>
+          <div class="map-card">
+            <a href="dust2.html"
+              ><img src="img/maps/dust2.jpg" alt="Dust II" />
+              <h3>Dust II</h3></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="other-maps" class="map-section">
+        <h2>Другие карты</h2>
+        <div class="map-grid"><!-- Добавьте карты здесь --></div>
+      </section>
+
+      <section id="good-to-know" class="map-section">
+        <h2>Полезно знать</h2>
+        <div class="tips">
+          <p>1. Всегда тренируйте раскидки перед игрой.</p>
+          <p>2. Используйте смоки для блокировки обзора врага.</p>
+          <p>3. Не забывайте про флешки.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Нижняя шапка -->
+    <div class="bottom-header">
+      <a href="map.html" class="icon"
+        ><img src="img/icons/mapicon.png" alt="Карта"
+      /></a>
+      <a href="other.html" class="icon"
+        ><img src="img/icons/goodtoknow.png" alt="Полезно"
+      /></a>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer>
+      <p>&copy; NadeSpot 2025</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        const body = document.body;
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      }
+
+      document.addEventListener("click", function (event) {
+        const navMenu = document.getElementById("navMenu");
+        const menuIcon = document.querySelector(".menu-icon");
+        if (
+          !navMenu.contains(event.target) &&
+          !menuIcon.contains(event.target)
+        ) {
+          navMenu.classList.remove("active");
+          document.body.classList.remove("menu-open");
+        }
+      });
+    </script>
+  </body>
+</html>
