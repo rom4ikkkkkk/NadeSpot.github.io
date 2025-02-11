@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NadeSpot</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Blacker+Sans:wght@400;700&display=swap"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <!-- Подключение внешнего CSS -->
   </head>
   <body>
+    
     <!-- Шапка сайта -->
     <header>
       <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -36,7 +36,6 @@
     <!-- Основной контент -->
     <div class="container">
       <section id="active-maps" class="map-section">
-        <h2>Активные карты</h2>
         <div class="map-grid">
           <div class="map-card">
             <a href="anubis.html"
@@ -84,19 +83,8 @@
       </section>
 
       <section id="other-maps" class="map-section">
-        <h2>Другие карты</h2>
         <div class="map-grid"><!-- Добавьте карты здесь --></div>
       </section>
-
-      <section id="good-to-know" class="map-section">
-        <h2>Полезно знать</h2>
-        <div class="tips">
-          <p>1. Всегда тренируйте раскидки перед игрой.</p>
-          <p>2. Используйте смоки для блокировки обзора врага.</p>
-          <p>3. Не забывайте про флешки.</p>
-        </div>
-      </section>
-    </div>
 
     <!-- Нижняя шапка -->
     <div class="bottom-header">
@@ -107,11 +95,6 @@
         ><img src="img/icons/goodtoknow.png" alt="Полезно"
       /></a>
     </div>
-
-    <!-- Подвал сайта -->
-    <footer>
-      <p>&copy; NadeSpot 2025</p>
-    </footer>
 
     <script>
       function toggleMenu() {

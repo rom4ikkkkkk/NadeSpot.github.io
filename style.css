@@ -1,6 +1,6 @@
 /* Основные стили */
 body {
-  font-family: "Blacker Sans", sans-serif;
+  font-family: "Montserrat", serif;
   background: linear-gradient(to bottom, #1b183a, #0f0d1f);
   color: white;
   margin: 0;
@@ -20,30 +20,16 @@ header {
 }
 
 header h1 {
-  font-weight: 700;
+  font-weight: 300;
   margin: 0;
   font-size: 24px;
 }
 
+.map-section h2 {
+  font-weight: 500;
+}
+
 /* Кнопки в шапке */
-.header-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.header-buttons a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.header-buttons a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
 
 /* Иконки */
 .menu-icon {
@@ -86,7 +72,7 @@ nav {
 }
 
 .map-section h2 {
-  color: #ffa500;
+  color: #000000;
 }
 
 .map-grid {
@@ -129,14 +115,6 @@ nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Подвал */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 30px;
-}
-
 /* Нижняя шапка */
 .bottom-header {
   position: fixed;
@@ -154,6 +132,12 @@ footer {
 .bottom-header .icon img {
   width: 30px;
   height: 30px;
+}
+
+@media (min-width: 769px) {
+  .header-buttons {
+    display: none;
+  }
 }
 
 /* Мобильная версия */
@@ -174,6 +158,24 @@ footer {
     display: flex;
   }
 
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header-buttons a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  .header-buttons a:hover {
+    background: rgba(255, 255, 255, 0.726);
+  }
+  /* Менюшка слева */
   .menu-header {
     background: #0f0d1f;
     padding: 20px;
@@ -197,21 +199,11 @@ footer {
     text-decoration: none;
   }
 
-  .menu-item i {
-    margin-right: 10px;
-  }
-
   nav.active {
     transform: translateX(0);
   }
 
   body.menu-open {
     background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  #other-maps,
-  #good-to-know,
-  .tips {
-    display: none;
   }
 }
