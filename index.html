@@ -40,44 +40,37 @@
           <div class="map-card">
             <a href="anubis.html"
               ><img src="img/maps/anubis.jpg" alt="Anubis" />
-              <h3>Anubis</h3></a
-            >
+              <h3>Anubis</h3></a>
           </div>
           <div class="map-card">
             <a href="mirage.html"
               ><img src="img/maps/mirage.jpg" alt="Mirage" />
-              <h3>Mirage</h3></a
-            >
+              <h3>Mirage</h3></a>
           </div>
           <div class="map-card">
             <a href="ancient.html"
               ><img src="img/maps/ancient.jpg" alt="Ancient" />
-              <h3>Ancient</h3></a
-            >
+              <h3>Ancient</h3></a>
           </div>
           <div class="map-card">
             <a href="dust2.html"
               ><img src="img/maps/dust2.jpg" alt="Dust II" />
-              <h3>Dust II</h3></a
-            >
+              <h3>Dust II</h3></a>
           </div>
           <div class="map-card">
             <a href="inferno.html"
               ><img src="img/maps/inferno.jpg" alt="Inferno" />
-              <h3>Inferno</h3></a
-            >
+              <h3>Inferno</h3></a>
           </div>
           <div class="map-card">
             <a href="Nuke.html"
               ><img src="img/maps/nuke.jpeg" alt="Nuke" />
-              <h3>Nuke</h3></a
-            >
+              <h3>Nuke</h3></a>
           </div>
           <div class="map-card">
             <a href="Train.html"
               ><img src="img/maps/Train.png" alt="Train" />
-              <h3>Train</h3></a
-            >
+              <h3>Train</h3></a>
           </div>
         </div>
       </section>
@@ -88,33 +81,14 @@
 
     <!-- Нижняя шапка -->
     <div class="bottom-header">
-      <a href="map.html" class="icon"
-        ><img src="img/icons/mapicon.png" alt="Карта"
-      /></a>
-      <a href="other.html" class="icon"
-        ><img src="img/icons/goodtoknow.png" alt="Полезно"
-      /></a>
+      <a href="map.html" class="icon">
+        <img src="img/icons/mapicon.png" alt="Карта"/></a>
+      <a href="other.html" class="icon">
+        <img src="img/icons/goodtoknow.png" alt="Полезно"/>
+      </a>
     </div>
-
-    <script>
-      function toggleMenu() {
-        const navMenu = document.getElementById("navMenu");
-        const body = document.body;
-        navMenu.classList.toggle("active");
-        body.classList.toggle("menu-open");
-      }
-
-      document.addEventListener("click", function (event) {
-        const navMenu = document.getElementById("navMenu");
-        const menuIcon = document.querySelector(".menu-icon");
-        if (
-          !navMenu.contains(event.target) &&
-          !menuIcon.contains(event.target)
-        ) {
-          navMenu.classList.remove("active");
-          document.body.classList.remove("menu-open");
-        }
-      });
+    <script src="myscript.js">
     </script>
+
   </body>
 </html>
