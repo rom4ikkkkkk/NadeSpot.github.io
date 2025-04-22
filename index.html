@@ -79,16 +79,32 @@
         <div class="map-grid"><!-- Добавьте карты здесь --></div>
       </section>
 
-    <!-- Нижняя шапка -->
-    <div class="bottom-header">
-      <a href="map.html" class="icon">
-        <img src="img/icons/mapicon.png" alt="Карта"/></a>
-      <a href="other.html" class="icon">
-        <img src="img/icons/goodtoknow.png" alt="Полезно"/>
-      </a>
+    
+<!-- МОДАЛЬНОЕ ОКНО ЧАТ‑БОТА -->
+<div id="chat-modal" class="chat-modal">
+  <div class="chat-overlay" onclick="toggleChat(false)"></div>
+  <div class="chat-box">
+    <button class="chat-close" onclick="toggleChat(false)">✕</button>
+    <h2>ИИ‑помощник CS 2</h2>
+    <div id="chat-output" class="chat-output"></div>
+    <div class="chat-input-row">
+      <input type="text" id="user-input" placeholder="Задайте вопрос про CS 2…" />
+      <button id="send-btn">Отправить</button>
     </div>
-    <script src="myscript.js">
-    </script>
+  </div>
+</div>
+
+<!-- Нижняя шапка -->
+<footer class="bottom-header">
+  <a href="map.html" class="icon">
+    <img src="img/icons/mapicon.png" alt="Карта"/>
+  </a>
+  <button class="icon" onclick="toggleChat(true)">
+    <img src="img/icons/goodtoknow.png" alt="Полезно"/>
+  </button>
+</footer>
+
+<script src="myscript.js"></script>
 
   </body>
 </html>
