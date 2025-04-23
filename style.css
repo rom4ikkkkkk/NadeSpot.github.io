@@ -1,6 +1,8 @@
 /* Основные стили */
 body {
-  font-family: "Blacker Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   background: linear-gradient(to bottom, #1b183a, #0f0d1f);
   color: white;
   margin: 0;
@@ -8,71 +10,17 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Шапка */
 header {
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
 }
 
-header h1 {
-  font-weight: 700;
-  margin: 0;
-  font-size: 24px;
-}
-
-/* Кнопки в шапке */
-.header-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.header-buttons a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.header-buttons a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Иконки */
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.site-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Навигационное меню */
-nav {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: #1b183a;
-  padding: 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
+.logo img {
+  max-width: 250px;
+  height: auto;
 }
 
 /* Основной контент */
@@ -92,7 +40,7 @@ nav {
 .map-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 .map-card {
@@ -100,7 +48,7 @@ nav {
   text-align: center;
   overflow: hidden;
   border-radius: 10px;
-  height: 200px;
+  height: 150px;
 }
 
 .map-card a {
@@ -129,14 +77,6 @@ nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Подвал */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 30px;
-}
-
 /* Нижняя шапка */
 .bottom-header {
   position: fixed;
@@ -156,58 +96,31 @@ footer {
   height: 30px;
 }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .site-icon {
-    display: block;
-  }
-
-  header h1 {
-    display: none;
-  }
-
-  nav {
-    display: flex;
-  }
-
-  .menu-header {
-    background: #0f0d1f;
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .menu-content {
-    background: #1b183a;
-    padding: 20px;
-    flex-grow: 1;
-  }
-
-  .menu-item {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .menu-item i {
-    margin-right: 10px;
-  }
-
-  nav.active {
-    transform: translateX(0);
-  }
-
-  body.menu-open {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+.nade-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px; /* Добавьте отступы слева и справа */
 }
 
-/* ===== СТИЛИ ДЛЯ ЧАТ‑БОТА ===== */ .chat-modal { display: none; position: fixed; inset: 0; z-index: 2000; } .chat-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); } .chat-box { position: relative; width: 90%; max-width: 400px; height: 500px; margin: 5% auto; background: #1b183a; border-radius: 10px; display: flex; flex-direction: column; padding: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.5); } .chat-close { position: absolute; top: 8px; right: 8px; background: transparent; border: none; font-size: 20px; color: white; cursor: pointer; } .chat-box h2 { color: #ffa500; text-align: center; margin: 0 0 10px; } .chat-output { flex: 1; background: #0f0d1f; padding: 10px; border-radius: 5px; overflow-y: auto; color: white; font-size: 14px; } .chat-input-row { display: flex; margin-top: 10px; } .chat-input-row input { flex: 1; padding: 8px; border: none; border-radius: 5px 0 0 5px; font-size: 14px; } .chat-input-row button { padding: 8px 12px; border: none; border-radius: 0 5px 5px 0; background: #007bff; color: white; cursor: pointer; font-size: 14px; } .chat-input-row button:hover { background: #0056b3; } .message { margin: 6px 0; line-height: 1.4; } .user-message { color: #7ecbff; } .bot-message  { color: #fff; }
+.nade-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.nade-card img {
+  width: 180px;
+  height: 150px; /* Фиксированная высота изображения */
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px; /* Скругление только сверху */
+}
+
+.nade-card h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 10px 10px; /* Скругление только снизу */
+}

@@ -6,34 +6,17 @@
     <title>NadeSpot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <!-- Подключение внешнего CSS -->
   </head>
+
   <body>
-    
-    <!-- Шапка сайта -->
     <header>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-      <h1>NadeSpot</h1>
-      <div class="header-buttons">
-        <a href="#active-maps">Активные карты</a>
-        <a href="#other-maps">Другие карты</a>
-      </div>
-      <div class="site-icon">🎯</div>
+      <a class="logo">
+        <img src="img\icons\nadespot.png" alt="NadeSpot Logo">
+      </a>
     </header>
 
-    <!-- Навигационное меню -->
-    <nav id="navMenu">
-      <div class="menu-header">NadeSpot</div>
-      <div class="menu-content">
-        <a href="contacts.html" class="menu-item"><i>📞</i> Контакты</a>
-        <a href="about.html" class="menu-item"><i>ℹ️</i> О приложении</a>
-        <a href="settings.html" class="menu-item"><i>⚙️</i> Настройки</a>
-      </div>
-    </nav>
-
-    <!-- Основной контент -->
     <div class="container">
       <section id="active-maps" class="map-section">
         <div class="map-grid">
@@ -75,28 +58,8 @@
         </div>
       </section>
 
-      <section id="other-maps" class="map-section">
-        <div class="map-grid"><!-- Добавьте карты здесь --></div>
-      </section>
-
-    
-<!-- МОДАЛЬНОЕ ОКНО ЧАТ‑БОТА -->
-<div id="chat-modal" class="chat-modal">
-  <div class="chat-overlay" onclick="toggleChat(false)"></div>
-  <div class="chat-box">
-    <button class="chat-close" onclick="toggleChat(false)">✕</button>
-    <h2>ИИ‑помощник CS 2</h2>
-    <div id="chat-output" class="chat-output"></div>
-    <div class="chat-input-row">
-      <input type="text" id="user-input" placeholder="Задайте вопрос про CS 2…" />
-      <button id="send-btn">Отправить</button>
-    </div>
-  </div>
-</div>
-
-<!-- Нижняя шапка -->
 <footer class="bottom-header">
-  <a href="map.html" class="icon">
+  <a href="index.html" class="icon">
     <img src="img/icons/mapicon.png" alt="Карта"/>
   </a>
   <button class="icon" onclick="toggleChat(true)">
